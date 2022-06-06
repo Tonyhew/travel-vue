@@ -5,11 +5,14 @@
     </div>
     <div class="header-input">
       <span class="iconfont icon-search">&#xe632;</span>
-      输入城市/景点/游玩主题</div>
-    <div class="header-right">
-      {{ this.city }}
-      <span class="iconfont icon-arrow">&#xe60e;</span>
+      输入城市/景点/游玩主题
     </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{ this.city }}
+        <span class="iconfont icon-arrow">&#xe60e;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -49,6 +52,7 @@ export default {
       width: 1.24rem
       text-align: center
       float: right
+      color: #fff
       .icon-arrow
         margin-left: -.04rem
         font-size: .24rem
