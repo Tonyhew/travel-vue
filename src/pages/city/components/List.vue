@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import BetterScroll from 'better-scroll'
+import Bscroll from 'better-scroll'
 
 export default {
   name: 'CityList',
@@ -39,7 +39,7 @@ export default {
     letter: String
   },
   mounted () {
-    this.scroll = new BetterScroll(this.$refs.wrapper)
+    this.scroll = new Bscroll(this.$refs.wrapper)
   },
   watch: {
     letter () {
