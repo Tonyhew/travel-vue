@@ -1,6 +1,6 @@
 <template>
   <div>
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <home-banner :banner="swiperList"></home-banner>
     <home-icons :iconList="iconList"></home-icons>
     <home-recommend :recommendList="recommendList"></home-recommend>
@@ -20,7 +20,6 @@ export default {
   name: 'Home',
   data () {
     return {
-      city: '',
       swiperList: [],
       iconList: [],
       recommendList: [],
@@ -36,15 +35,13 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('/api/data.json')
-        .then(this.getHomeInfoSucc)
+      axios.get('/api/data.json').then(this.getHomeInfoSucc)
     },
 
     getHomeInfoSucc (res) {
       res = res.data
       if (res && res.ret) {
         const data = res.data
-        this.city = data.city
         this.swiperList = data.swiperList
         this.iconList = data.iconList
         this.recommendList = data.recommendList
