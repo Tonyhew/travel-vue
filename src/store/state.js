@@ -1,4 +1,5 @@
 let defaultCity = '北京'
+let defaultShowGallery = false
 
 try {
   if (localStorage.city) {
@@ -7,5 +8,6 @@ try {
 } catch (e) {}
 
 export default {
-  city: defaultCity
+  city: defaultCity,
+  showGallery: defaultShowGallery
 }

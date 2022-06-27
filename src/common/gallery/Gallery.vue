@@ -9,6 +9,7 @@
           <img
             class="gallery-img"
             :src="item"
+            alt=""
           />
         </swiper-slide>
         <div
@@ -43,7 +44,7 @@ export default {
   },
   methods: {
     handleCloseGallery () {
-      this.$emit('close')
+      this.$emit('closeGallery')
     }
   }
 }
